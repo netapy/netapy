@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sophia: the overhyped toaster — Baudouin Arbarétier</title>
+<link rel="canonical" href="https://netapy.com/writing/sophia-toaster">
+<meta name="author" content="Baudouin Arbarétier">
+<meta property="og:title" content="Sophia: the overhyped toaster">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://netapy.com/writing/sophia-toaster">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.92em%22 font-size=%2280%22>·</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fcfaf6;
+    --fg: #1a1816;
+    --muted: #8a857d;
+    --rule: #e6e1d6;
+    --link: #b3aa97;
+  }
+  html { background: var(--bg); }
+  body {
+    font-family: "EB Garamond", "Adobe Garamond Pro", Garamond, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 32rem;
+    margin: 6rem auto 8rem;
+    padding: 0 1.5rem;
+    font-feature-settings: "kern", "liga", "onum";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: underline; text-decoration-color: var(--link); text-decoration-thickness: 0.5px; text-underline-offset: 3px; transition: text-decoration-color 0.15s; }
+  a:hover { text-decoration-color: var(--fg); }
+  nav { font-size: 0.95rem; color: var(--muted); margin: 0 0 3rem; }
+  nav a { text-decoration-color: transparent; }
+  nav a:hover { text-decoration-color: var(--muted); }
+
+  h1 { font-size: 1.55rem; font-weight: 500; line-height: 1.2; margin: 0 0 2rem; letter-spacing: -0.005em; }
+  h2 { font-size: 1.1rem; font-weight: 600; margin: 2.4rem 0 0.6rem; }
+  h3 { font-size: 1rem; font-weight: 600; color: var(--muted); margin: 2rem 0 0.5rem; }
+  p  { margin: 0 0 1.1rem; }
+  em, i { font-style: normal; font-weight: 500; }
+  strong, b { font-weight: 600; }
+  blockquote { margin: 1.6rem 0; padding-left: 1.2rem; border-left: 1px solid var(--rule); color: #4a463f; }
+  blockquote p { margin: 0 0 0.5rem; }
+  img { max-width: 100%; height: auto; display: block; margin: 2rem auto; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 0.82em; background: #f3efe6; padding: 0.1em 0.3em; }
+  pre { background: #f3efe6; padding: 1rem; overflow-x: auto; font-size: 0.85rem; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid var(--rule); margin: 3rem 0 1.5rem; }
+  ul, ol { padding-left: 1.2rem; margin: 0 0 1.1rem; }
+  li { margin: 0.25rem 0; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0; font-variant-numeric: oldstyle-nums; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Baudouin Arbarétier</a></nav>
+<h1>Sophia: The Overhyped Toaster</h1>
+<h2>Preliminary Knowledge</h2>
+<p>Technology is fascinating. The multiplicity of achievements mankind managed to unlock today is ridiculous. Even more ridiculous, is what we will be able to do 10 years from now. <a href="https://singularityhub.com/2016/03/22/technology-feels-like-its-accelerating-because-it-actually-is/">Progress is exponential</a>.</p>
+<p>Robots are the big chunk of what fantasies we imagine in the future of technology. 1984, the great movie <em>Terminator</em> was released, depicting a world in which human-like robots have taken control. No technology at the time was near the ones showcased in this science-fiction, but somehow, the idea that anthropomorphous machines will be a common thing never seemed very far.</p>
+<p>While hardware was the prominent focus at the dawn of computing, software stole the show these last couple of years. In the package, this intriguing concept : <strong>artificial intelligence</strong>.</p>
+<h3>About Artificial Intelligence</h3>
+<p>We all have a rough idea of its uses, and the shape it has: vocal assistants, NPC behavior in games, chatbots, recommendation systems…<br>Merriam-Webster defines artificial intelligence as the following.</p>
+<blockquote>
+<ol>
+<li>A branch of computer science dealing with the simulation of intelligent behavior in computers.  </li>
+<li>The capability of a machine to imitate intelligent human behavior.</li>
+</ol>
+</blockquote>
+<p>Let’s take it this way: a basic machine is the most <strong>straightforward</strong> entity you can find. Command it to do something, and it will plainly do it, taking into account no other elements than the one you gave it upstream.<br>It is impossible for a programmer to instruct the robot about everything that could happen. Unless he gives it some form of <strong>proactive</strong> intelligence, various obstacles or unexpected events might get in its way and prevent it from succeeding in its mission.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*cxV2wfFxmvvzgW6J" alt=""></p>
+<p>A Boston Dynamics robot fail.</p>
+<p>The robot on the sequence above has been designed by Soft Bank’s <strong>Boston Dynamics</strong>. Marc Raibert showed this video during his <a href="https://www.youtube.com/watch?v=AO4In7d6X-c">TED</a> speech.<br>The robot is obviously highly advanced concerning basic balance, movements and coordination. Artificial intelligence allows him to remain standing even when in motion and with adding/removing weight from its arms.</p>
+<p>However, it doesn’t take to be an expert to notice that it has some problems <strong>detecting</strong> other (unexpected?) objects in its <strong>environment</strong>. It does not compute well other boxes, or even the rolling rack in which he gets his hand stuck.</p>
+<p>What makes it different from a human ? Its learning and analysing capabilities are limited to what the programmer provided. The program doesn’t feed itself, it doesn’t expand its knowledge and perfect its actions by learning outside of its primary frame of action.<br>This is the fundamental difference between artificial intelligence and artificial <strong>general</strong> intelligence (AGI).</p>
+<p>Today, <strong>A</strong>rtificial <strong>G</strong>eneral <strong>I</strong>ntelligence corresponds to the “fantasy” — at least for now — of having robots as, if not more, intelligent as humans. Forms of artificial intelligence that think for and by themselves, learning every second from every sensors or information it receives, and not being limited to the themes it has been programmed to deal with.</p>
+<p>We call the method “<strong>deep learning</strong>”, autonomously recognizing patterns in a massive quantity of information and keeping it in memory for even better learning further on. But today, deep learning is limited to only certain <a href="https://machinelearningmastery.com/inspirational-applications-deep-learning/">activities</a> such as picture recognition or automatic text translation.</p>
+<p>Hopefully, you understood that AGI today is not a thing, for three main reasons: 1- Computing power is not sufficient yet.<br>2- We would need to feed deep learning programs with a <strong>lot more</strong> data, before getting to this level of intelligence.<br>3- Deep learning models (or even deep learning itself) might not be well adapted yet.</p>
+<p>What about Sophia?</p>
+<h2>Sophia, by Hanson Robotics.</h2>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*5cgKRYcCz8S8ILFi.jpg" alt=""></p>
+<p>Sophia at MSC 2018</p>
+<p>(After seeing it <a href="https://youtu.be/G-zyTlZQYpE">appear <em>again</em></a> on the tonight show, I thought I would write a few lines to clear things up a bit and demystify it.)</p>
+<p>19th of April, 2015, the <strong>puppet</strong> was switched on for the first time. The same puppet that received Saudi citizenship, late 2017. Numerous stories about it have been written and shared all around the world. It gave speeches, attended tv shows, answered countless interviews… There is very little chance you haven’t heard of Sophia.</p>
+<p>If there is something in which Hanson Robotics (Sophia’s creator) excels in, it’s <strong>communication</strong>. Founded in 2003 in Hong Kong, the firm dedicates its activity to designing the most <strong>realistic</strong> robot imitations of human behavior and appearance.</p>
+<p>There are some legitimate questions we can ask, when a small 15-year-old limited company, supposedly achieves what <strong>tech giants</strong> from the 90s still have as low stages of early <a href="https://deepmind.com/">concepts</a>.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*DTkXIWICoVn14LYA.jpg" alt=""></p>
+<p>When I first heard about the <a href="https://www.apbspeakers.com/speaker/sophia/">story</a>, of this robot with supposed “superhuman intelligence and advanced ability to read faces, empathize with emotions, understand the nuances of language and communicate with thousands of facial expressions…”, something sounded fishy.</p>
+<p>Sophia is presented to us as the <a href="https://www.evolving-science.com/intelligent-machines/sophia-robot-speaks-un-and-now-citizen-saudi-arabia-00460">achievement</a> of mankind that finally links us to the future we dreamed of and saw in the movies. It sounds like we finally managed to create the first real <em>terminator</em>. As I mentioned previously, Saudi Arabia gave it an official citizenship, making it a legal entity, equivalent to a human being. They must know what they are doing, right? It should mean that it is in fact the most advanced intelligence ever created, shouldn’t it? That’s awesome, big progress <strong><em>seems</em></strong> to be happening!</p>
+<p>But things can’t be that simple.</p>
+<p>Another wave was one of fear and incomprehension, people being afraid of how things seem to move so quickly. Medias using the classical rational approach in response, trying to predict how and when <a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/robots-debate-ai-humanity-take-over-world-lifelike-humans-hans-sophia-a7839061.html">robots will take over humanity</a>. Should we start <a href="https://phys.org/news/2017-12-robots-rights.html">giving robots different rights</a>? Oh god, Sophia just said <a href="https://www.deccanchronicle.com/lifestyle/viral-and-trending/111117/i-will-destroy-humans-humanoid-ai-robot-sophia-gets-saudi-citizenship.html">she will destroy humanity</a>! Was she joking? What more? <a href="http://www.bbc.co.uk/newsbeat/article/42122742/sophia-the-robot-wants-a-baby-and-says-family-is-really-important">She wants to have a baby now</a>! She <a href="https://www.forbes.com/sites/zarastone/2018/08/09/everything-you-need-to-know-about-sophias-robot-love/#258f20c7615a">must have feelings</a>. Do <a href="https://atos.net/en/blog/do-robots-have-feelings-too'">robots have feeling</a>? Will we be able to <a href="https://www.dailymail.co.uk/sciencetech/article-5767077/Sophia-robots-creator-says-humans-marry-life-like-droids-civil-rights-2045.html">marry robots</a>?</p>
+<p>Shh…</p>
+<p>The story unfolds so beautifully. It seems that we just landed in the future. But keep your belts fastened, we’re not there yet.</p>
+<p>Remember when I told you that <strong>A</strong>rtificial <strong>G</strong>eneral <strong>I</strong>ntelligence today is not a thing? Well, as you might expect, Sophia is no exception to that.<br>Hanson Robotics might have a certain talent in reproducing human behavior technologically, but there is certainly nothing human like in Sophia’s intelligence.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*nIJ2XqDM_nxCrSib.jpg" alt=""></p>
+<p>Let me explain you grossly how Sophia works. Hanson actually released the <a href="https://github.com/hansonrobotics">source code of their “AI”</a> on GitHub, which should help.<br>Its intelligence is roughly composed of 4 main parts:<br>(attempting to simplify)</p>
+<ul>
+<li>Chat-Bot. This simply corresponds to a system developed to build conversations in interaction with a human being. The heart of a chat-bot system is essentially machine learning: it treats huge amounts of data (i.e. human language), recognizes patterns and progressively learns which answer is appropriate and which isn’t, according to a certain input.</li>
+<li>Layer for pre-written responses and custom input. This allows Hanson Robotics to enter in custom responses to certain phrases. It completes the previous layer in some way, allowing the puppet-master to register certain inputs upstream. It allows easier personalization and adaptation to the intelligence. (e.g “<em>I’m on my favorite show, the tonight show</em>”)</li>
+<li>Behavioral system. Thanks to this, Sophia can have good timing on her listening and answering, express certain emotions in reaction to specific words or expressions. It basically makes the link between the input/outputs of the language system and the motorized components of Sophia such as its face or neck.</li>
+<li>Input system (for microphones and cameras). Sophia can collect and process information and inputs from its environment thanks to this. The main types being sound (for voice recognition) and image (to recognize faces and objects).</li>
+</ul>
+<p>None of these technologies above were considered as innovations in 2015. The most impressive one to the mainstream would perhaps be the ChatBot layer: the first ChatBots started being developed in the late 60s (<a href="https://www.chatbotpack.com/a-history-of-chatbots/">ELIZA or</a> PARRY), and the latest being vocal assistants such as Siri or Alexa. Nothing very new here.</p>
+<p>The most advanced part of Sophia’s “intelligence” is possibly its <em>behavioural system</em> and the hardware counterparts for facial movements. The reason Sophia was so credible and overhyped by medias is majorly because of how advanced and (relatively) realistic its behavior was. As mentioned previously, Hanson Robotics dedicates its activity to reproducing the most accurate imitation of human behavior with robotics. Sophia can mimic about <a href="https://www.voanews.com/a/mht-human-like-robot-mimic-facial-expressions-sophia-hanson-robotics/3251313.html">62 facial expressions</a> (not thousands, poke <a href="https://www.apbspeakers.com/speaker/sophia/">apbspeakers</a>), maintain eye contact and use appropriate tones of voice according to the situation.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*eEwXYlnECsyg1-LP.jpg" alt=""></p>
+<p>Sophia and its creator Ben Goertzel (source: Singularity NET)</p>
+<p>We can consider Sophia as a well thought and designed mix of many (already existing) technologies, forming together a credible imitation of a human-like robot. There is no real technological innovation, just a well-crafted mirage. The illusion is perfect when you see it from the outside, without having any contact or interaction with it. You seem to be looking at a perfect replica of human behavior on a machine. But when you have to deal with it on the inside, behind the curtain, things get blurry and more complicated.</p>
+<p>Last example I read, 15th of November 2018, the French news website <em>L’Usine Nouvelle</em> <a href="https://www.usinenouvelle.com/editorial/video-nous-avons-interviewe-le-robot-sophia-et-vite-realise-ses-limites.N769469">published an article</a>, describing their disappointment concerning Sophia actual performance and intelligence, when they got to see it.</p>
+<blockquote>
+<p>We had to choose a handful of questions from a predefined list, to be selected and asked in the order of the list and without skipping questions.</p>
+</blockquote>
+<p>The fantasy falls apart the more you look into it. We are far from the Sophia that was described by almost every news outlets in 2017. Not only can it not appropriately answer any questions, but her physical reaction often seem unadapted (“Goodbye Sophia” - <em>angry face</em>).</p>
+<p>Facebook’s head of AI, Yann LeCun is one of those who have alerted people of the <em>scam</em>. He wrote the following tweet in reaction to Tech Insider’s post.</p>
+<blockquote>
+<p>“This is to AI as prestidigitation is to real magic.<br>Perhaps we should call this “Cargo Cult AI” or “Potemkin AI” or “Wizard-of-Oz AI”.<br>In other words, it’s complete bullsh*t (pardon my French).<br>Tech Insider: you are complicit in this scam.” -Yann LeCun</p>
+</blockquote>
+<p>Not only is Sophia an outrage to the mainstream by giving them a misrepresentation of how advanced technology is, but it also is to the scientific community who get immensely less recognition for <strong>actually</strong> grinding to make AGI possible.</p>
+<p>In response, Chief Scientist of Hanson Robotics, Ben Goertzel defended the project by saying it helps people to understand and trust artificial intelligence more.</p>
+<p>In the end, Sophia is maybe not all shady and nefarious. We can at least give it the fact that it brought Artificial Intelligence into the discussion a bit more. As things move so quickly, it is a conversation we must have. Of course, we are still somewhat far from the fantasy that Sophia was believed to symbolize, but we better adapt it before we must adapt to it.</p>
+<p>Elon Musk warned countless times about the danger that AI could represent if we do not anticipate and frame its development. In an attempt to further keep AI/AGI under human control, he co-founded <a href="https://www.openai.com/">Open A</a>I, in favor of open and transparent forms of artificial intelligence.</p>
+<p>We are not yet in the future we seemed to have reached, nevertheless we must prepare and most importantly <strong>educate ourselves</strong> to these matters. Artificial Intelligence could represent the big transition of technology: from tools and entertainment today, to a whole new perspective of evolution for tomorrow.</p>
+<hr>
+<p class="meta">January 2019</p>
+</body>
+</html>
